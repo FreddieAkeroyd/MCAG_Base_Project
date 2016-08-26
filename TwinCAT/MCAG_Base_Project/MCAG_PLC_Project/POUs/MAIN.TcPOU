@@ -1,11 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.0.25">
-  <POU Name="MAIN" Id="{68d5c4cd-ed5a-46ef-a7cd-a34a6aaecb11}">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.0.38">
+  <POU Name="MAIN" Id="{68d5c4cd-ed5a-46ef-a7cd-a34a6aaecb11}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM MAIN
 VAR
 	sVersion: STRING:='1.0.0';
 	M1:FB_DriveVirtual;
 	M1Link:FB_NcAxis;
+	M2:FB_DriveVirtual;
+	M2Link:FB_NcAxis;
 	bLimitFwd AT %I*: BOOL;
 	bLimitBwd AT %I*: BOOL;
 	bHomeSensor AT %I*: BOOL;
@@ -43,6 +45,7 @@ END_VAR
                           </o>
                           <v n="LValue">false</v>
                           <v n="Boolean">false</v>
+                          <v n="IsInstance">true</v>
                           <v n="Id">11L</v>
                         </o>
                         <o n="OutputItems" t="OutputItemList">
@@ -60,6 +63,7 @@ END_VAR
                               </o>
                               <v n="LValue">true</v>
                               <v n="Boolean">false</v>
+                              <v n="IsInstance">false</v>
                               <v n="Id">13L</v>
                             </o>
                             <o>
@@ -74,6 +78,7 @@ END_VAR
                               </o>
                               <v n="LValue">true</v>
                               <v n="Boolean">false</v>
+                              <v n="IsInstance">false</v>
                               <v n="Id">14L</v>
                             </o>
                           </l2>
@@ -97,6 +102,7 @@ END_VAR
                               </o>
                               <v n="LValue">false</v>
                               <v n="Boolean">false</v>
+                              <v n="IsInstance">false</v>
                               <v n="Id">6L</v>
                             </o>
                             <v n="Id">5L</v>
@@ -125,6 +131,7 @@ END_VAR
                         <v n="CallType" t="Operator">FunctionBlock</v>
                         <v n="EN">false</v>
                         <v n="ENO">false</v>
+                        <n n="STSnippet" />
                         <v n="Id">12L</v>
                       </o>
                     </l2>
@@ -155,6 +162,7 @@ END_VAR
                           </o>
                           <v n="LValue">false</v>
                           <v n="Boolean">false</v>
+                          <v n="IsInstance">true</v>
                           <v n="Id">21L</v>
                         </o>
                         <o n="OutputItems" t="OutputItemList">
@@ -172,6 +180,7 @@ END_VAR
                               </o>
                               <v n="LValue">true</v>
                               <v n="Boolean">false</v>
+                              <v n="IsInstance">false</v>
                               <v n="Id">23L</v>
                             </o>
                             <o>
@@ -186,6 +195,7 @@ END_VAR
                               </o>
                               <v n="LValue">true</v>
                               <v n="Boolean">false</v>
+                              <v n="IsInstance">false</v>
                               <v n="Id">24L</v>
                             </o>
                             <o>
@@ -200,6 +210,7 @@ END_VAR
                               </o>
                               <v n="LValue">true</v>
                               <v n="Boolean">false</v>
+                              <v n="IsInstance">false</v>
                               <v n="Id">25L</v>
                             </o>
                             <o>
@@ -214,6 +225,7 @@ END_VAR
                               </o>
                               <v n="LValue">true</v>
                               <v n="Boolean">false</v>
+                              <v n="IsInstance">false</v>
                               <v n="Id">26L</v>
                             </o>
                             <o>
@@ -228,6 +240,7 @@ END_VAR
                               </o>
                               <v n="LValue">true</v>
                               <v n="Boolean">false</v>
+                              <v n="IsInstance">false</v>
                               <v n="Id">27L</v>
                             </o>
                             <o>
@@ -242,6 +255,7 @@ END_VAR
                               </o>
                               <v n="LValue">true</v>
                               <v n="Boolean">false</v>
+                              <v n="IsInstance">false</v>
                               <v n="Id">28L</v>
                             </o>
                             <o>
@@ -256,6 +270,7 @@ END_VAR
                               </o>
                               <v n="LValue">true</v>
                               <v n="Boolean">false</v>
+                              <v n="IsInstance">false</v>
                               <v n="Id">29L</v>
                             </o>
                             <o>
@@ -270,6 +285,7 @@ END_VAR
                               </o>
                               <v n="LValue">true</v>
                               <v n="Boolean">false</v>
+                              <v n="IsInstance">false</v>
                               <v n="Id">30L</v>
                             </o>
                             <o>
@@ -284,6 +300,7 @@ END_VAR
                               </o>
                               <v n="LValue">true</v>
                               <v n="Boolean">false</v>
+                              <v n="IsInstance">false</v>
                               <v n="Id">31L</v>
                             </o>
                             <o>
@@ -298,6 +315,7 @@ END_VAR
                               </o>
                               <v n="LValue">true</v>
                               <v n="Boolean">false</v>
+                              <v n="IsInstance">false</v>
                               <v n="Id">32L</v>
                             </o>
                           </l2>
@@ -414,6 +432,7 @@ END_VAR
                               </o>
                               <v n="LValue">false</v>
                               <v n="Boolean">false</v>
+                              <v n="IsInstance">false</v>
                               <v n="Id">18L</v>
                             </o>
                             <v n="Id">17L</v>
@@ -431,6 +450,7 @@ END_VAR
                               </o>
                               <v n="LValue">false</v>
                               <v n="Boolean">false</v>
+                              <v n="IsInstance">false</v>
                               <v n="Id">20L</v>
                             </o>
                             <v n="Id">19L</v>
@@ -448,6 +468,7 @@ END_VAR
                               </o>
                               <v n="LValue">false</v>
                               <v n="Boolean">false</v>
+                              <v n="IsInstance">false</v>
                               <v n="Id">34L</v>
                             </o>
                             <v n="Id">33L</v>
@@ -465,6 +486,7 @@ END_VAR
                               </o>
                               <v n="LValue">false</v>
                               <v n="Boolean">false</v>
+                              <v n="IsInstance">false</v>
                               <v n="Id">36L</v>
                             </o>
                             <v n="Id">35L</v>
@@ -482,6 +504,7 @@ END_VAR
                               </o>
                               <v n="LValue">false</v>
                               <v n="Boolean">false</v>
+                              <v n="IsInstance">false</v>
                               <v n="Id">38L</v>
                             </o>
                             <v n="Id">37L</v>
@@ -499,6 +522,7 @@ END_VAR
                               </o>
                               <v n="LValue">false</v>
                               <v n="Boolean">false</v>
+                              <v n="IsInstance">false</v>
                               <v n="Id">40L</v>
                             </o>
                             <v n="Id">39L</v>
@@ -516,6 +540,7 @@ END_VAR
                               </o>
                               <v n="LValue">false</v>
                               <v n="Boolean">false</v>
+                              <v n="IsInstance">false</v>
                               <v n="Id">42L</v>
                             </o>
                             <v n="Id">41L</v>
@@ -533,6 +558,7 @@ END_VAR
                               </o>
                               <v n="LValue">false</v>
                               <v n="Boolean">false</v>
+                              <v n="IsInstance">false</v>
                               <v n="Id">44L</v>
                             </o>
                             <v n="Id">43L</v>
@@ -550,6 +576,7 @@ END_VAR
                               </o>
                               <v n="LValue">false</v>
                               <v n="Boolean">false</v>
+                              <v n="IsInstance">false</v>
                               <v n="Id">46L</v>
                             </o>
                             <v n="Id">45L</v>
@@ -567,6 +594,7 @@ END_VAR
                               </o>
                               <v n="LValue">false</v>
                               <v n="Boolean">false</v>
+                              <v n="IsInstance">false</v>
                               <v n="Id">48L</v>
                             </o>
                             <v n="Id">47L</v>
@@ -584,6 +612,7 @@ END_VAR
                               </o>
                               <v n="LValue">false</v>
                               <v n="Boolean">false</v>
+                              <v n="IsInstance">false</v>
                               <v n="Id">50L</v>
                             </o>
                             <v n="Id">49L</v>
@@ -601,6 +630,7 @@ END_VAR
                               </o>
                               <v n="LValue">false</v>
                               <v n="Boolean">false</v>
+                              <v n="IsInstance">false</v>
                               <v n="Id">52L</v>
                             </o>
                             <v n="Id">51L</v>
@@ -618,6 +648,7 @@ END_VAR
                               </o>
                               <v n="LValue">false</v>
                               <v n="Boolean">false</v>
+                              <v n="IsInstance">false</v>
                               <v n="Id">54L</v>
                             </o>
                             <v n="Id">53L</v>
@@ -635,6 +666,7 @@ END_VAR
                               </o>
                               <v n="LValue">false</v>
                               <v n="Boolean">false</v>
+                              <v n="IsInstance">false</v>
                               <v n="Id">56L</v>
                             </o>
                             <v n="Id">55L</v>
@@ -652,6 +684,7 @@ END_VAR
                               </o>
                               <v n="LValue">false</v>
                               <v n="Boolean">false</v>
+                              <v n="IsInstance">false</v>
                               <v n="Id">58L</v>
                             </o>
                             <v n="Id">57L</v>
@@ -669,6 +702,7 @@ END_VAR
                               </o>
                               <v n="LValue">false</v>
                               <v n="Boolean">false</v>
+                              <v n="IsInstance">false</v>
                               <v n="Id">60L</v>
                             </o>
                             <v n="Id">59L</v>
@@ -686,6 +720,7 @@ END_VAR
                               </o>
                               <v n="LValue">false</v>
                               <v n="Boolean">false</v>
+                              <v n="IsInstance">false</v>
                               <v n="Id">62L</v>
                             </o>
                             <v n="Id">61L</v>
@@ -703,6 +738,7 @@ END_VAR
                               </o>
                               <v n="LValue">false</v>
                               <v n="Boolean">false</v>
+                              <v n="IsInstance">false</v>
                               <v n="Id">64L</v>
                             </o>
                             <v n="Id">63L</v>
@@ -720,6 +756,7 @@ END_VAR
                               </o>
                               <v n="LValue">false</v>
                               <v n="Boolean">false</v>
+                              <v n="IsInstance">false</v>
                               <v n="Id">66L</v>
                             </o>
                             <v n="Id">65L</v>
@@ -737,6 +774,7 @@ END_VAR
                               </o>
                               <v n="LValue">false</v>
                               <v n="Boolean">false</v>
+                              <v n="IsInstance">false</v>
                               <v n="Id">68L</v>
                             </o>
                             <v n="Id">67L</v>
@@ -754,6 +792,7 @@ END_VAR
                               </o>
                               <v n="LValue">false</v>
                               <v n="Boolean">false</v>
+                              <v n="IsInstance">false</v>
                               <v n="Id">70L</v>
                             </o>
                             <v n="Id">69L</v>
@@ -771,6 +810,7 @@ END_VAR
                               </o>
                               <v n="LValue">false</v>
                               <v n="Boolean">false</v>
+                              <v n="IsInstance">false</v>
                               <v n="Id">72L</v>
                             </o>
                             <v n="Id">71L</v>
@@ -778,7 +818,7 @@ END_VAR
                           <o>
                             <o n="Operand" t="Operand">
                               <v n="Operand">"M1Link.axis"</v>
-                              <v n="Type">"TC2_MC2.AXIS_REF"</v>
+                              <v n="Type">"AXIS_REF"</v>
                               <v n="Comment">""</v>
                               <v n="SymbolComment">""</v>
                               <v n="Address">""</v>
@@ -788,6 +828,7 @@ END_VAR
                               </o>
                               <v n="LValue">false</v>
                               <v n="Boolean">false</v>
+                              <v n="IsInstance">false</v>
                               <v n="Id">74L</v>
                             </o>
                             <v n="Id">73L</v>
@@ -876,6 +917,7 @@ END_VAR
                         <v n="CallType" t="Operator">FunctionBlock</v>
                         <v n="EN">false</v>
                         <v n="ENO">false</v>
+                        <n n="STSnippet" />
                         <v n="Id">22L</v>
                       </o>
                     </l2>
@@ -910,6 +952,5 @@ END_VAR
         </NWL>
       </Implementation>
     </Action>
-    <ObjectProperties />
   </POU>
 </TcPlcObject>
